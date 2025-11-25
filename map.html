@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    img {
+    display: block;
+    margin: 0 auto;
+    }
 
+    body {
+
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: transparent;
+      color: #000000;
+      text-align: center;
+      background-image: url('defaultimage.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; 
+      font-family:Courier New, monospace;
+      background-attachment: fixed; 
+    }
+    
+    .text
+{
+padding: 20px;
+font-family:Courier New, monospace;
+text-align: center;
+margin: auto;
+margin: 10px;
+color: black;
+text-shadow: 1px 1px white;
+}
+
+  nav {
+      background-color: rgba(18, 47, 128, 0.85);
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+      padding: 10px 20px;
+      transition: background-color 0.4s ease, transform 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #201583;
+      transform: scale(1.60);
+    }
+
+    h1 {
+      margin-top: 30px;
+    text-shadow: 2px 2px white;
+    }
+    
+    .heading
+    {
+    text-shadow: 2px 2px white;
+    
+    }
+ 
+
+    img {
+      width: 300px;
+      margin-top: 20px;
+      border-radius: 8px;
+      margin:auto;
+    }
+
+    p {
+      width: 80%;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.5;
+    }
+    </style>
+
+
+  
+<title>Map Game</title>
+</head>
+<body>
+  <nav>
+    <a href="https://halo-hue.github.io/Final-Project/">Course Page</a>
+    <a href="https://halo-hue.github.io/Final-Project/projects.html">Projects</a>
+    <a href="https://halo-hue.github.io/Final-Project/concepts.html">Concepts</a>
+    <a href="https://halo-hue.github.io/Final-Project/databases.html">Databases</a>
+    <a href="https://halo-hue.github.io/Final-Project/documentation.html">Documentation</a>
+     <a href="https://halo-hue.github.io/Final-Project/devteam.html">Dev Team</a>
+    
+  </nav>
+
+
+<img id="myImage" src="Blank.png" style="width: 250px"><br>
+
+<button onclick="document.getElementById('myImage').src='Cor.png'">Corozal</button><br>
+<button onclick="document.getElementById('myImage').src='Orange.png'">Orange Walk</button><br>
+<button onclick="document.getElementById('myImage').src='Belize.png'">Belize</button><br>
+<button onclick="document.getElementById('myImage').src='Cayo.png'">Cayo</button><br>
+<button onclick="document.getElementById('myImage').src='Stann.png'">Stann Creek</button><br>
+<button onclick="document.getElementById('myImage').src='Toledo.png'">Toledo</button><br>
+<button onclick="document.getElementById('myImage').src='Blank.png'">Reset</button><br>
+
+
+</body>
+</html>
