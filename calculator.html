@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    img {
+    display: block;
+    margin: 0 auto;
+    }
 
+    body {
+
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: transparent;
+      color: #000000;
+      text-align: center;
+      background-image: url('defaultimage.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; 
+      font-family:Courier New, monospace;
+      background-attachment: fixed; 
+    }
+    
+    .text
+{
+padding: 20px;
+font-family:Courier New, monospace;
+text-align: center;
+margin: auto;
+margin: 10px;
+color: black;
+text-shadow: 1px 1px white;
+}
+
+  nav {
+      background-color: rgba(18, 47, 128, 0.85);
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+      padding: 10px 20px;
+      transition: background-color 0.4s ease, transform 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #201583;
+      transform: scale(1.60);
+    }
+
+    h1 {
+      margin-top: 30px;
+    text-shadow: 2px 2px white;
+    }
+    
+    .heading
+    {
+    text-shadow: 2px 2px white;
+    
+    }
+ 
+
+    img {
+      width: 300px;
+      margin-top: 20px;
+      border-radius: 8px;
+      margin:auto;
+    }
+
+    p {
+      width: 80%;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.5;
+    }
+    </style>
+
+
+  
+<title>Welcome to the Course Page!!</title>
+</head>
+<body>
+  <nav>
+    <a href="https://halo-hue.github.io/Final-Project/">Course Page</a>
+    <a href="https://halo-hue.github.io/Final-Project/projects.html">Projects</a>
+    <a href="https://halo-hue.github.io/Final-Project/concepts.html">Concepts</a>
+    <a href="https://halo-hue.github.io/Final-Project/databases.html">Databases</a>
+    <a href="https://halo-hue.github.io/Final-Project/documentation.html">Documentation</a>
+     <a href="https://halo-hue.github.io/Final-Project/devteam.html">Dev Team</a>
+    
+  </nav>
+
+<div class="heading">
+<h1>Calculator</h1>
+<h2>Add Two Numbers</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p>Sum: <span id="result"></span></p>
+
+    <script>
+        function calculateSum() {
+            // Get the values from the input fields
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            
+            // Calculate the sum
+            let sum = num1 + num2;
+            
+            // Display the result
+            document.getElementById('result').textContent = sum;
+        } </script>
+    
+    <h2>Multiply Two Numbers</h2>
+    <input type="number" id="num3" placeholder="Enter first number">
+    <input type="number" id="num4" placeholder="Enter second number">
+    <button onclick="calculateProduct()">Calculate Product</button>
+    <p>Product: <span id="product"></span></p>
+
+    <script>
+    
+		function calculateProduct() {
+		// Get the values from the input fields
+        let num3 = parseFloat(document.getElementById('num3').value);
+        let num4 = parseFloat(document.getElementById('num4').value);
+            
+            // Calculate the product
+            let prod = num3 * num4;
+            
+            // Display the result
+            document.getElementById('product').textContent = prod;
+			} 
+            </script>
+			
+    <h2>Divide Two Numbers</h2>
+    <input type="number" id="num5" placeholder="Enter first number">
+    <input type="number" id="num6" placeholder="Enter second number">
+    <button onclick="calculateQuotient()">Calculate Quotient</button>
+    <p>Quotient: <span id="quotient"></span></p>
+
+    <script>
+		function calculateQuotient() {
+		// Get the values from the input fields
+            let num5 = parseFloat(document.getElementById('num5').value);
+            let num6 = parseFloat(document.getElementById('num6').value);
+            
+            // Calculate the quotient
+            let quotient = num5 / num6;
+            
+            // Display the result
+            document.getElementById('quotient').textContent = quotient;
+			}
+            </script>
+
+    <h2>Minus Two Numbers</h2>
+    <input type="number" id="num7" placeholder="Enter first number">
+    <input type="number" id="num8" placeholder="Enter second number">
+    <button onclick="calculateDifference()">Calculate Difference</button>
+    <p>Difference: <span id="difference"></span></p>
+
+    <script>
+		function calculateDifference() {
+		// Get the values from the input fields
+            let num7 = parseFloat(document.getElementById('num7').value);
+            let num8 = parseFloat(document.getElementById('num8').value);
+            
+            // Calculate the difference
+            let Difference = num7 - num8;
+            
+            // Display the result
+        document.getElementById('difference').textContent = Difference;
+        }
+    </script>
+
+    <h2>Remainder of Two Numbers</h2>
+    <input type="number" id="num9" placeholder="Enter first number">
+    <input type="number" id="num10" placeholder="Enter second number">
+    <button onclick="calculateRemainder()">Calculate Remainder</button>
+    <p>Remainder: <span id="remainder"></span></p>
+
+    <script>
+		function calculateRemainder() {
+		// Get the values from the input fields
+            let num9 = parseFloat(document.getElementById('num9').value);
+            let num10 = parseFloat(document.getElementById('num10').value);
+            
+            // Calculate the difference
+            let Rem = num9 % num10;
+            
+            // Display the result
+        document.getElementById('remainder').textContent = Rem;
+        }
+    </script>
+
+</body>
+</html>
