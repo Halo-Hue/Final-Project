@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    img {
+    display: block;
+    margin: 0 auto;
+    }
 
+    body {
+
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: transparent;
+      color: #000000;
+      text-align: center;
+      background-image: url('defaultimage.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; 
+      font-family:Courier New, monospace;
+      background-attachment: fixed; 
+    }
+    
+    .text
+{
+padding: 20px;
+font-family:Courier New, monospace;
+text-align: center;
+margin: auto;
+margin: 10px;
+color: black;
+text-shadow: 1px 1px white;
+}
+
+  nav {
+      background-color: rgba(18, 47, 128, 0.85);
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+      padding: 10px 20px;
+      transition: background-color 0.4s ease, transform 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #201583;
+      transform: scale(1.60);
+    }
+
+    h1 {
+      margin-top: 30px;
+    text-shadow: 2px 2px white;
+    }
+    
+    .heading
+    {
+    text-shadow: 2px 2px white;
+    
+    }
+ 
+
+    img {
+      width: 300px;
+      margin-top: 20px;
+      border-radius: 8px;
+      margin:auto;
+    }
+
+    p {
+      width: 80%;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.5;
+    }
+    </style>
+
+
+  
+<title>Welcome to the Convertor Page!!</title>
+</head>
+<body>
+  <nav>
+    <a href="https://halo-hue.github.io/Final-Project/">Course Page</a>
+    <a href="https://halo-hue.github.io/Final-Project/projects.html">Projects</a>
+    <a href="https://halo-hue.github.io/Final-Project/concepts.html">Concepts</a>
+    <a href="https://halo-hue.github.io/Final-Project/databases.html">Databases</a>
+    <a href="https://halo-hue.github.io/Final-Project/documentation.html">Documentation</a>
+    <a href="https://halo-hue.github.io/Final-Project/devteam.html">Dev Team</a>
+    
+  </nav>
+  <h2>Binary to Hexadecimal Converter</h2>
+    <img id="myImage" src="images (5).png" style="width: 200px"><br>
+<input type="text" id="binaryInput" placeholder="Enter binary number">
+<button onclick="convertToHex()">Convert</button>
+<p>Hexadecimal: <span id="hexOutput"></span></p>
+
+<h2>ASCII Converter</h2>
+    <img id="yourImage" src="SmartSelect_20251124_230920_Chrome.jpg" style="width: 200px"><br>
+<input type="text" id="asciiInput" placeholder="Enter text">
+<button onclick="convertToASCII()">Convert</button>
+<p>ASCII Codes: <span id="asciiOutput"></span></p>
+
+<h2>Unicode Converter</h2>
+<input type="text" id="unicodeInput" placeholder="Enter text from 1F600-1F609">
+<button onclick="convertToUnicode()">Convert</button>
+<p>Result: <span id="unicodeOutput"></span></p>
+
+&#x1F600; <!-- 😀 Grinning Face -->
+&#x1F601; <!-- 😁 Beaming Face -->
+&#x1F602; <!-- 😂 Face with Tears of Joy -->
+&#x1F603; <!-- 😃 Grinning Face with Big Eyes -->
+&#x1F604; <!-- 😄 Grinning Face with Smiling Eyes -->
+&#x1F605; <!-- 😅 Grinning Face with Sweat -->
+&#x1F606; <!-- 😆 Grinning Squinting Face -->
+&#x1F609; <!-- 😉 Winking Face -->
+&#x1F60A; <!-- 😊 Smiling Face with Smiling Eyes -->
+&#x1F60D; <!-- 😍 Heart Eyes -->
+
+<script>
+  // binary to hex
+  function convertToHex() {
+      const binary = document.getElementById("binaryInput").value;
+      if (!/^[01]+$/.test(binary)) { alert("Enter a valid binary!"); return; }
+      const decimal = parseInt(binary, 2);
+      const hex = decimal.toString(16).toUpperCase();
+      document.getElementById("hexOutput").textContent = hex;
+  }
+
+  // ASCII Converter
+  function convertToASCII() {
+      const text = document.getElementById("asciiInput").value;
+      const ascii = Array.from(text).map(c => c.charCodeAt(0)).join(" ");
+      document.getElementById("asciiOutput").textContent = ascii;
+  }
+
+  // Unicode Converter
+  function convertToUnicode() {
+  const code = document.getElementById("unicodeInput").value.trim();
+  if(!code) return;
+  // parse hex and convert
+  const emoji = String.fromCodePoint(parseInt(code, 16));
+  document.getElementById("unicodeOutput").textContent = emoji;
+  }
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script>
+
+
+
+
+
+</body>
+</html>
