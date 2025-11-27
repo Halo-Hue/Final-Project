@@ -97,11 +97,11 @@
 
 
   <script>
-    /* cache logic */
+    /* cache idea */
     let cached = false;
     let cachedNew = false;
 
-    // FIRST BUTTON — Load Data
+    /* first button */
     document.getElementById("loadBtn").addEventListener("click", function () {
       const status = document.getElementById("statusText");
       const icon = document.getElementById("cacheIcon");
@@ -125,7 +125,7 @@
       }, 3000);
     });
 
-    // SECOND BUTTON — Load New
+    /* second button / Load New */
     document.getElementById("loadNewBtn").addEventListener("click", function () {
       const statusNew = document.getElementById("statusTextNew");
 
@@ -141,4 +141,9 @@
       setTimeout(() => {
         statusNew.textContent = "New data loaded!";
         statusNew.className = "ready";
-        cachedNew = t
+        cachedNew = true;
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
