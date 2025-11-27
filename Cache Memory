@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Cache Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+
+    .button { padding: 10px 15px; font-size: 16px; cursor: pointer; margin: 10px 0; }
+
+    .loading { color: orange; }
+    .ready { color: green; font-weight: bold; }
+    .cache-icon { font-size: 30px; display: none; }
+    .cached { color: blue; display: inline; }
+
+    /* cache stored box */
+    .cache-box {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #e0f0ff;
+      border: 1px solid #3b82f6;
+      width: fit-content;
+      border-radius: 6px;
+      color: #1e40af;
+      font-weight: bold;
+    }
+    .cache-box.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cache Memory Demo</h1>
+
+  <div id="cacheIcon" class="cache-icon">💾</div>
+
+  <div id="cacheBox" class="cache-box">Cache Stored!</div>
+
+  <button id="loadBtn" class="button">Load Data</button>
+  
+  <p id="statusText"></p>
+
+  <script>
+    /*pretend thus is the "cache" */
+    let cached = false;
+
+    document.getElementById("loadBtn").addEventListener("click", function () {
+      const status = document.getElementById("statusText");
+      const icon = document.getElementById("cacheIcon");
+
+      /* cache box */
+      const box = document.getElementById("cacheBox");
+
+      if (cached) {
+        
+        status.textContent = "Loaded instantly from cache!";
+        status.className = "ready";
+        return;
+      }
+
+      // first time loading:
+      status.textContent = "Loading...";
+      status.className = "loading"; 
+
+      setTimeout(() => {
+        status.textContent = "Loaded!";
+        status.className = "ready";
+        cached = true; // now it's cached
+        status.textContent = "Loaded!!";
+        
+        // show cache icon
+        icon.classList.add("cached");
+
+        
+        box.classList.add("show");
+
+      }, 3000);
+      
+    });
+  </script>
+</body>
+</html>
